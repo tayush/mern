@@ -9,6 +9,10 @@ class EmployeeList extends Component {
             newEmp: [],
         };
     }
+    
+    componentWillMount() {
+        console.log("before render");
+    }
 
     componentDidMount() {
         axios.get("http://localhost:5000/employee-list").then((response) => {
